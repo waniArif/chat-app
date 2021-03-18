@@ -1,7 +1,5 @@
 const users = [];
 
-// addUser, removeUser, getUser, getUsersInRoom
-
 const addUser = ({ id, username, room }) => {
   // Clean the data
   username = username.trim().toLowerCase();
@@ -40,19 +38,12 @@ const removeUser = (id) => {
   }
 };
 
-// getUser
-
 const getUser = (id) => {
-  const user = users.find((user) => user.id === id);
-  if (!user) {
-    console.log("User NOT found!");
-  }
-  return user;
+  return users.find((user) => user.id === id);
 };
 
 const getUsersInRoom = (room) => {
   room = room.trim().toLowerCase();
-
   return users.filter((user) => user.room === room);
 };
 
